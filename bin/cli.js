@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 const Generator = require('../src');
-const argv = require('optimist').argv;
 const path = require('path');
 
 let config = {};
 try{
-  config = require(path.resolve(argv.config || 'package.json'))['thrift-generator'];
+  config = require(path.resolve('package.json'))['thrift-generator'];
 }
 catch(e){
-  console.error("no config file provided, or config file is corrutpted")
+  console.error("no config file provided, or config file is corrupted")
   process.exit(1);
 }
 
