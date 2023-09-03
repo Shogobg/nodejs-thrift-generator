@@ -23,6 +23,7 @@ const thriftCli2 = handlebars.compile(`{{executable}} -v --gen {{language}} -out
 module.exports = class {
     constructor(config) {
         const {executable, idl, output, generators, ignore, log} = {...defaults, ...config};
+
         this.defaults = {executable, idl, output};
 
         this.generators = generators;

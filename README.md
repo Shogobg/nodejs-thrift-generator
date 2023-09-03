@@ -2,21 +2,27 @@
 
 An easy way to compile thrift idl files using simple configuration.
 
-## Use globally
+## Usage
 
-### Install
+### Global Install
 
-`npm install -g thrift-generator`
+`npm install -g @shogobg/thrift-generator`
 
-## Use as a script
+### NPX
 
-### Install
+`npx @shogobg/thrift-generator`
 
-`npm install --save-dev thrift-generator`
+`npx @shogobg/thrift-generator /path/to/package.json`
 
-### Add configuration to your package.json
+### Use as a script
 
-```
+#### Install
+
+`npm install --save-dev @shogobg/thrift-generator`
+
+#### Add configuration to your package.json
+
+```JSON
 {
   "thrift-generator": {
     "log": "debug",
@@ -34,9 +40,9 @@ An easy way to compile thrift idl files using simple configuration.
 }
 ```
 
-### Add as a script on your package.json
+#### Add as a script on your package.json
 
-```
+```JSON
 {
  "scripts": {
     "thrift": "thrift-generator"
@@ -44,21 +50,21 @@ An easy way to compile thrift idl files using simple configuration.
 }
 ```
 
-# Configuration
+## Configuration
 
-## config.log
+### config.log
 
 Log level, can be 'info' or debug **(default: info)**
 
-## config.executable
+### config.executable
 
 Thrift cli executable path **(default: thrift)**
 
-## config.ignore
+### config.ignore
 
 Array of glob patterns to ignore while searching for thrift idl files.
 
-## config.genereators
+### config.genereators
 
 Array of thrift genereation commands
 
